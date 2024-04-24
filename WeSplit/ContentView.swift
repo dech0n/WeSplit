@@ -14,7 +14,7 @@ struct ContentView: View {
     
     @FocusState private var amountIsFocused
     
-    let tipPercentages = [10, 15, 20, 25, 0]
+    let tipPercentages = 1..<101
     
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
@@ -54,7 +54,7 @@ struct ContentView: View {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.navigationLink)
                 }
                 
                 Section("Amount per person") {
